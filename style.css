@@ -20,7 +20,7 @@ body {
 }
 
 .panel {
-  background-size: auto 100%;
+  /* background-size: auto 100%; */
   /* to preserve round corners on large screens */
   background-size: cover;
   background-position: center;
@@ -53,9 +53,12 @@ body {
   transition: opacity 0.3s ease-in 0.4s;
 }
 
-@media (max-width) {
+@media (max-width: 480px) {
   .container {
     width: 100vw;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
   }
   .panel:nth-of-type(4),
   .panel:nth-of-type(5) {
