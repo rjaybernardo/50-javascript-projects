@@ -1,48 +1,45 @@
-Expanding Cards
+- Setup html, css and js file
+- Live server
+- link stylesheet
+- add script.js
+- add font-awesome
+  - cdnjs.com
+  - copy the link tag
 
-- Add a background image and heading to each panel
-  - inline styling for background image
-- Flexbox to align everything
-- Add javascript
-  - When a panel is clicked add a class of "active"
-  - Then expands with css transition
-
-Javascript for event listeners
-CSS transitions for smooth effect
-
-Heading will come in until the card is fully expanded
-
-- use of delay in transition
-
----
-
-We use:
-
-- Use of Flexbox
-- Inline style for background image for each panel
-- Position relative for panel and position absolute for h3
-- transition for animation
-- use of opacity to hide a panel
-- use of media query
-
----
-
-Panel when clicked:
-
-- .panel
-  - it will widen
-- .panel h3
-  - no display
-  - will display
-    - from opacity:0 into opacity: 1
-    - transition: opacity 0.3s ease-in 0.7s
-    - transition: [target] [start time] [animation] [time delay]
-
----
-
-Inline style
-
+```html
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
 ```
- <div style="background-image: url('www.usplash.com')"> </div>
 
+- google-fonts roboto
+  - roboto | regular | 400
+  - use import - do not copy the style tag
+  - paste inside the style.css
+
+```css
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
 ```
+
+- align-items: center = horizontal
+- justify-content: center = vertical
+- overflow: hidden = no scrollbar
