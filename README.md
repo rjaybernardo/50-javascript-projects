@@ -46,3 +46,27 @@ Inline style
  <div style="background-image: url('www.usplash.com')"> </div>
 
 ```
+
+---
+
+### Functionality
+
+- add event listener
+  - on click
+    - remove the active class on all the panels
+    - then add the active class on the panel that has been clicked
+
+Adds and Removes active class
+
+```
+panel.classList.add("active");
+panel.classList.remove("active");
+```
+
+Loop thru panels
+
+```
+panels.forEach((panel) => {
+  <!-- code here -->
+}
+```
