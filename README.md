@@ -1,5 +1,7 @@
 # Expanding Cards
 
+![expanding-cards](expanding-cards.png)
+
 - Add a background image and heading to each panel
   - inline styling for background image
 - Flexbox to align everything
