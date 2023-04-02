@@ -1,3 +1,5 @@
+# Boilerplate of the project
+
 - Setup html, css and js file
 - Live server
 - link stylesheet
