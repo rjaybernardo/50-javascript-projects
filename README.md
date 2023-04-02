@@ -1,4 +1,4 @@
-Expanding Cards
+# Expanding Cards
 
 - Add a background image and heading to each panel
   - inline styling for background image
