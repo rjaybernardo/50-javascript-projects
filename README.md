@@ -1,5 +1,6 @@
 # Progress Steps
 
+![progress steps](./progress-steps.png)
 In this project we display the progress bar
 
 - with number indicator and progress line
