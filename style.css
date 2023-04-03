@@ -1,5 +1,11 @@
 /* import roboto regular from google fonts*/
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
+
+/* Add variables */
+:root {
+  --line-border-fill: #3498db;
+  --line-border-empty: #e0e0e0;
+}
 
 /* if add any padding or border to an element it will not affect the width */
 * {
@@ -15,5 +21,109 @@ body {
   overflow: hidden;
   margin: 0;
 
-  font-family: "Roboto", sans-serif;
+  font-family: "Muli", sans-serif;
+
+  background-color: #f6f7fb;
+}
+
+.container {
+  /* center the button */
+  text-align: center;
+}
+
+.progress-container {
+  display: flex;
+  justify-content: space-between;
+  /* parent container of progress line */
+  position: relative;
+  margin-bottom: 30px;
+  min-width: 100%;
+  width: 350px;
+}
+/* pseudo selector for inserting content */
+.progress-container::before {
+  /* important to specify the content to insert */
+  content: " ";
+  background-color: var(--line-border-empty);
+  /* positioned from the parent container */
+  position: absolute;
+  /* positioned mid vertically  */
+  top: 50%;
+  left: 0;
+  /* center mid vertically */
+  transform: translateY(-50%);
+  height: 4px;
+  /* represents the empty line */
+  width: 100%;
+  /* move at the back */
+  z-index: -1;
+}
+
+/* blue line that shows progress */
+.progress {
+  background-color: var(--line-border-fill);
+  position: absolute;
+  /* positioned mid vertically  */
+  top: 50%;
+  left: 0;
+  /* center mid vertically */
+  transform: translateY(-50%);
+  height: 4px;
+  /* zero starting point */
+  width: 0%;
+  /* move at the back */
+  z-index: -1;
+  /* animation of the line */
+  transition: 0.4s ease-in;
+}
+
+.circle {
+  background-color: white;
+  /* text color */
+  color: #999;
+  /* makes it a circle */
+  border-radius: 50%;
+
+  /* needed to create a circle */
+  height: 30px;
+  width: 30px;
+
+  /* centers the element inside  */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 3px solid var(--line-border-empty);
+  transition: 0.4s ease;
+}
+
+.circle.active {
+  border-color: var(--line-border-fill);
+}
+
+.btn {
+  background-color: var(--line-border-fill);
+  color: #fff;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  /* font family of parent is inherited */
+  font-family: inherit;
+  padding: 8px 30px;
+  margin: 5px;
+  font-size: 14px;
+}
+
+/* active selector is used to select and style the active link */
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn:focus {
+  /* outline is a line drawn outside the element's border */
+  outline: 0;
+}
+.btn:disabled {
+  background-color: var(--line-border-empty);
+  cursor: not-allowed;
 }
