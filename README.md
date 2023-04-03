@@ -1,7 +1,7 @@
 # Progress Steps
 
 <p align="center">
-![progress steps](./progress-steps.png)
+<img src='./progress-steps.png'/>
 </p>
 In this project we display the progress bar
 
